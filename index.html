@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <h1>欢迎体验我的 AI 智能客服系统 🚀</h1>
-        <p>这是一个基于 <b>扣子 (Coze)</b> 搭建的通用企业/SaaS 场景智能客服 Agent。它集成了行业知识库与特定的对话工作流，旨在实现自动化、顾问式的 B端 用户转化与答疑。</p>
+        <p>这是一个基于 <b>扣子 (Coze)</b> 搭建的通用企业/SaaS 场景智能客服 Agent。它集成了行业知识库与特定的对话工作流，旨在实现自动化、顾问式 B端 用户转化与答疑。</p>
         <p class="hint">👉 请点击页面右下角的聊天悬浮球，即可开始实时对话体验！</p>
     </div>
 
@@ -27,6 +27,13 @@
             },
             componentProps: {
                 title: 'AI 智能助理'
+            },
+            auth: {
+                type: 'token',
+                token: 'pat_qltWHnpX9C3D1yrXC9Pirk956VHlUzzhVKdGtgP6oTptK9An8uTe51rwN5ISonu9',
+                onRefreshToken: function () {
+                    return 'pat_qltWHnpX9C3D1yrXC9Pirk956VHlUzzhVKdGtgP6oTptK9An8uTe51rwN5ISonu9';
+                }
             }
         });
     </script>
