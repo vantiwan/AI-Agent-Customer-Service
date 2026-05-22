@@ -19,24 +19,16 @@
         <p class="hint">👉 请点击页面右下角的聊天悬浮球，即可开始实时对话体验！</p>
     </div>
 
-    <!-- 引入扣子官方 Chat SDK -->
     <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
     <script>
         new CozeWebSDK.WebChatClient({
             config: {
-                bot_id: '7382091355268661302', //
+                bot_id: '7382091355268661302'
             },
             componentProps: {
-                title: 'AI 智能助理',
-            },
-            auth: {
-              type: 'token',
-              token: 'pat_********',
-              onRefreshToken: function () {
-                return 'pat_********'
-              }
+                title: 'AI 智能助理'
             }
-          });
+        });
     </script>
 </body>
 </html>
