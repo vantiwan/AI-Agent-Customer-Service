@@ -14,4 +14,4 @@
   * **知识库路由（RAG）**：精准匹配企业产品白皮书，拒绝 AI 幻觉。
 
 ## 🌐 在线体验地址
-*https://github.com/vantiwan/AI-Agent-Customer-Service/*
+*https://vantiwan.github.io/AI-Agent-Customer-Service/*
