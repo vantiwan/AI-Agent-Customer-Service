@@ -21,22 +21,22 @@
 <body>
     <div class="container">
         <h1>12530彩铃 · 多Agent智能客服系统 🚀</h1>
-        <p>本页面为微信公众号 <b>【12530彩铃】</b> 的 AI 智能客服演示 Demo。该项目采用先进的 <b>多Agent（Multi-Agent）架构</b> 设计，专为企业彩铃及个人彩铃场景打造自动化、顾问式的咨询与内容生成解决方案。</p>
+        <p>本页面为微信公众号 <b>【12530彩铃】</b> 的 AI 智能客服演示 Demo。该项目采用先进的 <b>多Agent（Multi-Agent）群组架构</b> 设计，专为企业彩铃及个人彩铃场景打造自动化、顾问式的咨询与内容生成解决方案。</p>
         
         <div class="section-title">📱 真实业务落地背景</div>
-        <p>该系统目前已在线上公众号正常接待用户。核心目标是通过智能化问答，全面解答用户关于<b>企业彩铃申请办理、个人彩铃定制</b>等各种疑难问题，并将高意向客户精准引导至私域（专属客服微信），实现高效的商业闭环。</p>
+        <p>该系统目前已在线上公众号正常接待用户。核心目标是通过智能化问答，全面解答用户关于<b>企业彩铃申请办理、个人彩铃定制</b>等各种疑难问题（本地知识库），并将高意向客户精准引导至私域（专属客服微信），实现高效的商业闭环。</p>
 
         <div class="section-title">⚙️ 核心架构与 Agent 分工</div>
         <ul>
             <li>
                 <b>1. 彩铃业务咨询 Agent</b> 
                 <span class="badge">已上线线上常态化接待</span>
-                <br>熟知企业及个人彩铃的办理流程、资费标准与常见问题（本地知识库）。负责首线流量承接、精准答疑以及高意向私域引流转化。
+                <br>熟知企业及个人彩铃的办理流程、资费标准与常见问题。负责首线流量承接、精准答疑以及高意向私域引流转化。
             </li>
             <li>
                 <b>2. 企业彩铃文案编辑 Agent</b> 
                 <span class="badge-wait">近期上线 / 独立调试中</span>
-                <br>根据企业客户的行业特质、宣传痛点与品牌形象，一键智能生成专业、吸睛、符合广电审核标准的彩铃定制宣传文案。
+                <br>根据企业客户的行业特质、宣传痛点与品牌形象，一键智能生成专业、吸睛、符合运营商审核标准的彩铃定制宣传文案。
             </li>
             <li>
                 <b>3. AI 配音生成 Agent</b> 
@@ -54,14 +54,21 @@
 
     <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
     <script>
-        new CozeWebSDK.WebChatClient({
-            config: {
-                bot_id: '7382091355268661302'
-            },
-            componentProps: {
-                title: '12530彩铃 智能助理'
-            }
-        });
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7382091355268661302',
+        },
+        componentProps: {
+          title: '12530彩铃 智能助理',
+        },
+        auth: {
+          type: 'token',
+          token: 'pat_5JLyJDUeV58ECbLF4VvwYTVjHpj7qIHqQnPBkWUF9WlQ3DNXuESO9eUNSiBG2r2A',
+          onRefreshToken: function () {
+            return 'pat_5JLyJDUeV58ECbLF4VvwYTVjHpj7qIHqQnPBkWUF9WlQ3DNXuESO9eUNSiBG2r2A'
+          }
+        }
+      });
     </script>
 </body>
 </html>
